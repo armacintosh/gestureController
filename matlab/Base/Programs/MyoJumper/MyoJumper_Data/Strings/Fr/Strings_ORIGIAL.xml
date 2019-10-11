@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StringResources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Resources>
+    <string>Press Enter when ready...</string>
+    <string>Keep your hand still!</string>
+    <string>Ready...</string>
+    <string>Set...</string>
+    <string>GO!</string>
+    <string>Extend your wrist and fingers to make the Bootle fly!</string>
+    <string>Good job! You flew </string>
+    <string> m!</string>
+  </Resources>
+  <TimerValue>15</TimerValue>
+  <HandTutorialImage>HandUp.png</HandTutorialImage>
+</StringResources>

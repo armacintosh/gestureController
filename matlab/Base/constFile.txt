@@ -1,0 +1,58 @@
+aboveBaseE=0.16472; %0.17441; % Lower EASIER [0.1-1] -- the % of distance between base and max (or base and base*Ratio, if used), w user profile, lower number decreases E thresh. w/o profile, 0 = base & 1 = max
+aboveBaseF=0.30418; %0.40203; % Higher EASIER [0.1-1] -- the % of distance between base and max (or base and base*Ratio, if used), w user profile, higher number increases F thresh.w/o profile, 0 = base & 1 = max
+aboveBaseAccel=1; % % multiplyer of threshold == 1.5 * current gyro max ...OLD: >1 allows more arm movement, < 1 allows less arm movements 
+aboveBaseGyro=487.3144; %538.5355; %183.4007; % Abs number to adjust with each person.... 
+
+errorChecking=1; % checks if all programs are still open and dashy still in view at each ProcessBin
+useClassifier=1; % 1-yes 0-no imports and applys feedback based on predicted fingers open/closed 
+keepHandClosed=0; % indicates that preferred gesture is closed hand, not open hand (if 1, instructed gest 1 not 2)
+speedFeedback=1; % slow down game if performing action with undesired gesture/ movements, speed up to normal speed if doing well.
+speedFeedbackType=2; % 1= based on predicted gesture, 2= based on threshold accel and gyro
+speedChangeMax=-3; % int betweetn -1 and -5 (default). to set limit to game speed when using speed feedback. if max Dashy speed == 0.8, set to 3 (1--> -5, 0.9 --> -4, 0.8--> -3, etc)
+
+stopTrialFigVisible=0; % 1- stop figure is visible, 0 means not visible (set to 0 when giving for home)
+makeTrialNotes=0; % if 1, dialogue at end of tial comes up to add notes
+calibratingGestures=0; % decides if gesture code will be added to calData , 1 for ys 0 for no
+remindStretch=1; % shows an image and confirmation button to stretch 1 yes 0 no
+useSyncTimer=0; % shows the current myoServer time while in myoJumper.
+showPlayTimer=0; % puts a timer in the background so they know how many minutes has elapsed since starting, DONT NEED
+useIMU=3; % using accel (1) or gyro (2) as the imu threshold feedback. for arm rotation v total movement, (3) for both
+
+calTimer=5; % number of seconds to display the calibration image for (seconds)
+calReady=3; % number of seconds to display before the calibration game - ready position
+
+EMGS1=3;% could be 3 or 1.  2. the lowest ch touching the arm
+EMGS2=6;% could be 6 or 8.  7. the highest ch touching the arm
+useUserProfile=0; % 0 for no, 1 for yes, just updates init faster- is using specific distance between F and E chs
+
+WINBIN=10; % 20 samples at 200 Hz = 100 ms window bin - this is the size of data for each feature/ classification
+sf=200; % used in find myo up and down, and used in Bayes Filter
+low_freq=2; % used in find myo up and down
+minE=0.2; % starting place for minE
+maxF=0.4; % starti ng place for maxF
+BayesFilter=1; % use filter 1 or not 0
+
+runningAvg=5; % the number of bins that are used to detereming the ongoing average changes, used in update max
+maxWindow=100; % number of bins to look back on ~ 30/10 seconds...If they have not done a max in  this time...
+maxWindowOverlap=0; % number of rows, defines when to reevaluate baseline (e.g. maxWindowOverlap=0 --> only updates every maxWindow, maxWindowOverlap=100 --> updates every frame), used in updatebase 
+countFromStart=0; % the first few seconds incrmeent counter
+
+upFinder=1; % decides how to find the E channel during calTimer 1- highest mean 2- circMean
+nChActivity=2; % decides wheather to take the top E/F or the top 2 E/F activity into account. 1 for 1 2 for 2
+
+updateEThresh=0; % change to 1 if; % you want to use an automatic update from checkOutput.m
+updateEThreshVal=0 ; % This; % value could change
+ThreshScale=2; % std multiplier. smaller with > variability maybe, used in push to game
+ReadyMeanMultiplier=1.1 % x * more activity than rest to make astro go up
+
+savedata=1; % save the output
+press=1; % change to 1 for real game play 0 for testing
+holdloop=1; % hold loop for testing, may not need it in exe, chg to 0
+
+closeTrial=0; bool to start /stop everything
+goDashy=0; % bool to start playing dashy after calibration
+calibrating=1; % indicates if it is the start or the main process, after finds Extensor_sensors switches to 0, used in processBin
+inError=0; % status of in error or not 0 no 1 yes.
+language=0; % 1 for english, 0 for french
+
+gameLoc=1,Dashy (Player#1);
