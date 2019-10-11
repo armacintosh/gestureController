@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StringResources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Resources>
+    <string>Appuie sur ENTRER pour commencer</string>
+    <string>Garde la main immobile</string>
+    <string>A vos marques...</string>
+    <string>Prêts...</string>
+    <string>Partez !</string>
+    <string>Super!  Tu voles  </string>
+    <string> m!</string>
+    <string>Hauteur: </string>
+    <string>Meilleur score: </string>
+  </Resources>
+  <HandTutorialInstruction>
+    <string>Lèves ta main avec les doigts ouverts ! </string>
+    <string>Lèves ta main avec les doigts fermés!</string>
+    <string>Fais une pince entre ton pouce et tes doigts !</string>
+  </HandTutorialInstruction>
+  <HandTutorialImage>
+    <string>HandUp.png</string>
+    <string>WristUp.png</string>
+    <string>Pinch.png</string>
+  </HandTutorialImage>
+  <BestHeight>313</BestHeight>
+</StringResources>
